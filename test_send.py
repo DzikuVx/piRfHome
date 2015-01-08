@@ -13,7 +13,7 @@ import piRfHome
 if __name__ == "__main__":
 
 	pi = pigpio.pi()
-	tx = virtualwire.tx(pi, 17, 2000) # Specify Pi, tx gpio, and baud.
+	tx = virtualwire.tx(pi, 4, 2000) # Specify Pi, tx gpio, and baud.
 
 	sender = piRfHome.rf(tx, 1);
 
