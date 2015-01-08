@@ -9,7 +9,7 @@ import virtualwire
 import time
 import pigpio
 
-class PapayaRF():
+class piRfHome():
 
 	def __init__(self, vw, sender):
 		self.vw = vw
@@ -34,7 +34,7 @@ if __name__ == "__main__":
 	pi = pigpio.pi()
 	tx = virtualwire.tx(pi, 17, 2000) # Specify Pi, tx gpio, and baud.
 
-	sender = PapayaRF(tx, 1);
+	sender = piRfHome(tx, 1);
 
 	#send 102010 as Weather/Pressure to device 0x02 with datatype uint32
 	# sender.send(0x02, 0x41, 0x02, 102011)
