@@ -15,14 +15,16 @@ if __name__ == "__main__":
 	pi = pigpio.pi()
 
 	rx = virtualwire.rx(pi, 18, 2000) # Specify Pi, tx gpio, and baud.
-
+	count = 0
 	while True:
-
 		pi.write(24, 0)
 
 		while rx.ready():
+			count = count + 1
 			pi.write(24, 1)
-			print(rx.get())
+			print(count)
+			rx.get()
+			#print(rx.get())
 
 		time.sleep(0.1)
 
