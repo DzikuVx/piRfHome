@@ -1,13 +1,14 @@
 import virtualwire
 import time
 import pigpio
+import random
 
 class rf():
 
 	def __init__(self, vw, sender):
 		self.vw = vw
 		self.sender = sender
-		self.messageId = 0
+		self.messageId = random.randint(1, 255)
 		self.retriesCount = 1
 		self.retriesDelay = 0.2
 
@@ -15,7 +16,7 @@ class rf():
 		self.messageId = self.messageId + 1;
 
 		if self.messageId == 256:
-			self.messageId = 0
+			self.messageId = 1
 
 	def setRetries(self, count, delay):
 		self.retriesCount = count

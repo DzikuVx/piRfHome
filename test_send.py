@@ -11,12 +11,12 @@ import piRfHome
 if __name__ == "__main__":
 
 	pi = pigpio.pi()
-	tx = virtualwire.tx(pi, 4, 2000) # Specify Pi, tx gpio, and baud.
+	tx = virtualwire.tx(pi, 4, 1000) # Specify Pi, tx gpio, and baud.
 
 	sender = piRfHome.rf(tx, 1)
 
 	# set 5 retries with 0.2 second delay
-	sender.setRetries(5, 0.5)
+	sender.setRetries(0, 0.5)
 
 	#send 102010 as Weather/Pressure to device 0x02 with datatype uint32
 	# sender.send(0x02, 0x41, 0x02, 102011)

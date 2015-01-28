@@ -17,7 +17,7 @@ if __name__ == "__main__":
 	sender = piRfHome.rf(tx, 0x01)
 
 	# set 5 retries with 0.2 second delay
-	sender.setRetries(5, 1)
+	sender.setRetries(2, 1)
 
 	#send 102010 as Weather/Pressure to device 0x02 with datatype uint32
 	# sender.send(0x02, 0x41, 0x02, 102011)
@@ -53,20 +53,21 @@ if __name__ == "__main__":
 	time.sleep(1)
 
 	#send pressure
-	val = int(round(dataExt[0]))
-	sender.send(0x00, 0x41, 0x02, val)
+	val = int(round(dataExt[0] * 100))
+	print("Pressure: " + str(val));
+	sender.send(0x00, 0x41, 0x05, val)
 
 	time.sleep(1)
 
 	#send humidity
 	val = int(round(data[1]))
-	sender.send(0x00, 0x42, 0x02, val)
+	sender.send(0x00, 0x42, 0x05, val)
 
 	time.sleep(1)
 
 	#send windspeed
 	val = int(round(dataExt[1]))
-	sender.send(0x00, 0x49, 0x02, val)
+	sender.send(0x00, 0x49, 0x05, val)
 
 	pi.write(23, 0)
 
