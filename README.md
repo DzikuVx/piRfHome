@@ -1,5 +1,5 @@
 # piRfHome
-Raspberry Pi RF 433 MHz protocol implementation for Home Automation 
+Raspberry Pi RF 433 MHz protocol implementation for Home Automation
 
 ## Description
 
@@ -22,4 +22,4 @@ pigpio has to be running as a service. To start:
 `sudo /home/pi/PIGPIO/pigpiod`
 
 ##Hardware
-This has been tested with FS1000A sender and XY-MK5V receiver. Communication over Virtual Wire was successful with Arduino Uno and Arduino Pro Micro.
+This has been tested with FS1000A sender and XY-MK-5V receiver. Communication over Virtual Wire was successful with Arduino Uno and Arduino Pro Micro.
