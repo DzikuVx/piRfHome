@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 
 '''
 Requires http://abyz.co.uk/rpi/pigpio/
 '''
 
-import virtualwire
+import piVirtualWire.piVirtualWire
 import time
 import pigpio
 import piRfHome

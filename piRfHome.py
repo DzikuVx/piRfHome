@@ -1,4 +1,4 @@
-import virtualwire
+import piVirtualWire.piVirtualWire
 import time
 import pigpio
 import random

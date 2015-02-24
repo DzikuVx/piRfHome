@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 '''
 Requires http://abyz.co.uk/rpi/pigpio/
 '''
-import virtualwire
+import piVirtualWire.piVirtualWire
 import time
 import pigpio
 import piRfHome
@@ -22,7 +22,7 @@ if __name__ == "__main__":
 	# sender.send(0x02, 0x41, 0x02, 102011)
 
 	count = 0
-	
+
 	while True:
 		count = count + 1
 		#send timestamp

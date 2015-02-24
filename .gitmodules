@@ -1,0 +1,3 @@
+[submodule "piVirtualWire"]
+	path = piVirtualWire
+	url = git@github.com:DzikuVx/piVirtualWire.git

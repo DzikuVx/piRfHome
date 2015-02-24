@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 
 '''
 Requires http://abyz.co.uk/rpi/pigpio/
 '''
 
-import virtualwire
+import piVirtualWire.piVirtualWire
 import time
 import pigpio
 import piRfHome
@@ -23,14 +23,14 @@ if __name__ == "__main__":
 		while rx.ready():
 			count = count + 1
 			pi.write(24, 1)
-			
+
 			out = rx.get();
 
 			deffed = []
 
 			for v in out:
 				deffed.append(chr(v))
-				
+
 			# print deffed
 
 			print '%d : %f' %(count, float(''.join(deffed))/10)
@@ -38,7 +38,7 @@ if __name__ == "__main__":
 			# print count + " " + int(''.join(deffed))
 			# temp = out[0] * 65536;
 			# temp = temp + (out[1] * 256)
-			# temp = temp + out[2] 
+			# temp = temp + out[2]
 
 			# print(out)
 			# print(temp)
