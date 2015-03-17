@@ -3,7 +3,7 @@
 '''
 Requires http://abyz.co.uk/rpi/pigpio/
 '''
-import piVirtualWire.piVirtualWire
+import piVirtualWire.piVirtualWire as piVirtualWire
 import time
 import pigpio
 import piRfHome
@@ -11,7 +11,7 @@ import piRfHome
 if __name__ == "__main__":
 
 	pi = pigpio.pi()
-	tx = virtualwire.tx(pi, 4, 1000) # Specify Pi, tx gpio, and baud.
+	tx = piVirtualWire.tx(pi, 4, 1000) # Specify Pi, tx gpio, and baud.
 
 	sender = piRfHome.rf(tx, 1)
 
